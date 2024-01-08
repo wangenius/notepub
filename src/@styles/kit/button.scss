@@ -1,0 +1,42 @@
+@import "../const";
+
+button{
+  box-sizing: border-box;
+  background-color: white;
+  padding: 4px 10px;
+  border: 2px solid transparent;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: $button_default_font;
+  border-radius: 12px;
+  white-space: nowrap;
+  transition-duration:100ms;
+  &:hover{
+    color: $button_hover_font;
+    background-color: $hover_bc;
+  }
+}
+
+.button_menu {
+  button{
+    margin: 3px;
+  }
+}
+
+.popContainer{
+  position: relative;
+}
+
+.iconButton{
+  &:hover{
+    background-color: #f1f1f1;
+  }
+  border-radius: 16px;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  svg {
+    width:  20px;
+    height:  20px;
+  }
+}

@@ -1,0 +1,40 @@
+@import "frame";
+@import "kit";
+@import "page";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: $default_font_family;
+}
+.root{
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+
+}
+.fill{
+  height: $header_height;
+  width: 100%;
+}
+
+.MainBox {
+  position: relative;
+  height: calc(100vh - $header_height);
+}
+
+.Pop {
+  z-index: 600;
+  position: fixed;
+  top: 0;
+  height: 100%;
+}
