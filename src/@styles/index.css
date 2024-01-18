@@ -10,6 +10,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Amiko:wght@700&family=Roboto:ital,wght@0,500;0,700;1,500&family=Teko:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto:ital,wght@0,500;0,700;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amiko:wght@700&family=Roboto:ital,wght@0,500;0,700;1,500&family=Teko:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto:ital,wght@0,500;0,700;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amiko:wght@700&family=Roboto:ital,wght@0,500;0,700;1,500&family=Teko:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto:ital,wght@0,500;0,700;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amiko:wght@700&family=Roboto:ital,wght@0,500;0,700;1,500&family=Teko:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @font-face {
   font-display: block;
   font-family: "Noto_Light";
@@ -143,7 +158,7 @@
 }
 button {
   box-sizing: border-box;
-  background-color: white;
+  background-color: transparent;
   padding: 4px 10px;
   border: 2px solid transparent;
   font-size: 0.9rem;
@@ -178,6 +193,40 @@ button:hover {
 .iconButton svg {
   width: 20px;
   height: 20px;
+}
+
+.szh-menu {
+  padding: 16px 8px 8px 8px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: rgba(9, 30, 66, 0.25) 0 0 0, rgba(9, 30, 66, 0.13) 0 0 0 1px;
+  width: max-content;
+}
+
+.szh-menu__item {
+  display: flex;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: medium, sans-serif;
+  color: #4f4f4f;
+  text-transform: lowercase;
+  width: 100%;
+  justify-content: space-between;
+}
+.szh-menu__item:hover {
+  background-color: #f5f5f5;
+}
+.szh-menu__item p {
+  flex: 1;
+}
+.szh-menu__item span svg {
+  width: 18px;
+  height: 18px;
+  color: #7a7a7a;
+}
+.szh-menu__item span:nth-of-type(1) {
+  margin-right: 10px;
 }
 
 input {
@@ -236,56 +285,24 @@ input {
   font-family: "light";
   src: url("font/light.woff2");
 }
-.article {
+.markdownPage {
   max-width: 1300px;
   margin: 0 auto;
 }
-.article .breadcrumb {
-  z-index: 200;
-  width: 100%;
-  color: #5e5e75;
-  display: flex;
-  position: sticky;
-  top: 72px;
-  background-color: white;
-}
-.article .breadcrumb * {
-  width: fit-content;
-}
-.article .breadcrumb .crumbMenu {
-  position: sticky;
-}
-.article .breadcrumb .crumb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 5px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.8rem;
-}
-.article .breadcrumb .crumb:hover {
-  color: #3a3636;
-  background-color: #f3f3f3;
-}
-.article .breadcrumb .preSlash {
-  position: relative;
-}
-.article .breadcrumb .preSlash:before {
-  content: "/";
-  color: #000;
-  left: -10px;
-  position: absolute;
-}
-.article .main {
+.markdownPage .main {
   max-width: 1300px;
   display: flex;
   z-index: 1;
 }
-.article .main .content_Box {
+@media screen and (max-width: 900px) {
+  .markdownPage .main {
+    flex-direction: column;
+  }
+}
+.markdownPage .main .content_Box {
   width: 100%;
 }
-.article .main .content_Box .directory_list {
+.markdownPage .main .content_Box .directory_list {
   margin-top: 10px;
   display: grid;
   width: 100%;
@@ -293,7 +310,7 @@ input {
   justify-content: space-between;
   grid-gap: 10px;
 }
-.article .main .content_Box .directory_list .content_item {
+.markdownPage .main .content_Box .directory_list .content_item {
   height: 140px;
   padding: 10px;
   border-radius: 10px;
@@ -301,25 +318,34 @@ input {
   transition: all 200ms;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
-.article .main .content_Box .directory_list .content_item .name {
+.markdownPage .main .content_Box .directory_list .content_item .name {
   transition: all 200ms;
   font-size: 1.5rem;
   white-space: nowrap;
   font-family: light, sans-serif;
   text-transform: uppercase;
 }
-.article .main .content_Box .directory_list .content_item .info {
+.markdownPage .main .content_Box .directory_list .content_item .info {
   position: absolute;
   bottom: 10px;
   left: 10px;
   font-size: 0.7rem;
 }
-.article .main .content_Box .articleFilesList {
+.markdownPage .main .content_Box .directory_list .content_item:hover {
+  scale: 0.96;
+  box-shadow: 0 0 0 5px rgba(192, 192, 192, 0.5);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.markdownPage .main .content_Box .directory_list .content_item:active {
+  scale: 0.9;
+}
+.markdownPage .main .content_Box .articleFilesList {
   width: 100%;
   margin-top: 30px;
 }
-.article .main .content_Box .articleFilesList .article_item {
+.markdownPage .main .content_Box .articleFilesList .article_item {
   display: flex;
   align-items: center;
   height: 60px;
@@ -327,37 +353,37 @@ input {
   border-top: 1px solid #eaeaea;
   padding: 20px;
 }
-.article .main .content_Box .articleFilesList .article_item:first-of-type {
+.markdownPage .main .content_Box .articleFilesList .article_item:first-of-type {
   border-top: none;
 }
-.article .main .content_Box .articleFilesList .article_item:hover {
+.markdownPage .main .content_Box .articleFilesList .article_item:hover {
   background-color: #f6f6f6;
 }
-.article .main .content_Box .articleFilesList .article_item .name {
+.markdownPage .main .content_Box .articleFilesList .article_item .name {
   font-family: light, sans-serif;
 }
 @media screen and (min-width: 1200px) {
-  .article .main .content_Box .directory_list {
+  .markdownPage .main .content_Box .directory_list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 @media screen and (max-width: 900px) {
-  .article .main .content_Box .directory_list {
+  .markdownPage .main .content_Box .directory_list {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (max-width: 600px) {
-  .article .main .content_Box .directory_list {
+  .markdownPage .main .content_Box .directory_list {
     grid-template-columns: 1fr;
   }
 }
-.article .main .navigation {
+.markdownPage .main .navigation {
   position: sticky;
   top: 140px;
   height: fit-content;
   width: 270px;
 }
-.article .main .navigation .title-anchor {
+.markdownPage .main .navigation .title-anchor {
   display: block;
   color: #606060;
   background-color: #ffffff;
@@ -368,20 +394,20 @@ input {
   cursor: pointer;
   border-radius: 10px;
 }
-.article .main .navigation .title-anchor:hover {
+.markdownPage .main .navigation .title-anchor:hover {
   background-color: #eeeeee;
 }
-.article .main .navigation .active {
+.markdownPage .main .navigation .active {
   color: #636f81;
   background-color: #eeeeee;
 }
-.article .main .body {
+.markdownPage .main .body {
   flex: 1;
   padding: 20px;
   margin: 0 auto;
   width: 1030px;
 }
-.article .main .body * {
+.markdownPage .main .body * {
   font-family: "HarmonyOS Sans SC", sans-serif;
   font-weight: 300;
   font-size: 0.96rem;
@@ -390,7 +416,7 @@ input {
   text-wrap: normal;
   user-select: text;
 }
-.article .main .body .inlineCode {
+.markdownPage .main .body .inlineCode {
   background-color: rgb(245, 245, 245);
   color: rgb(56, 58, 66);
   border-radius: 6px;
@@ -398,7 +424,7 @@ input {
   font-family: J_Light, sans-serif;
   font-weight: lighter;
 }
-.article .main .body pre div {
+.markdownPage .main .body pre div {
   background: rgb(245, 245, 245) !important;
   color: rgb(56, 58, 66);
   direction: ltr;
@@ -415,11 +441,11 @@ input {
   border: 1px solid rgb(245, 245, 245);
   transition: all 200ms;
 }
-.article .main .body pre div:hover {
+.markdownPage .main .body pre div:hover {
   background: #f6f6f6 !important;
   border: 1px solid #d5d5d5;
 }
-.article .main .body pre .language-Rust, .article .main .body pre .language-cpp {
+.markdownPage .main .body pre .language-Rust, .markdownPage .main .body pre .language-cpp {
   font-family: J_Light, sans-serif;
   background: transparent;
   color: rgb(56, 58, 66);
@@ -433,45 +459,45 @@ input {
   hyphens: none;
   font-weight: lighter;
 }
-.article .main .body pre .language-Rust span, .article .main .body pre .language-cpp span {
+.markdownPage .main .body pre .language-Rust span, .markdownPage .main .body pre .language-cpp span {
   font-family: J_Light, sans-serif;
   font-weight: lighter;
   font-size: 0.9rem;
   line-height: 0.9rem;
 }
-.article .main .body pre .language-Rust .hljs-keyword, .article .main .body pre .language-cpp .hljs-keyword {
+.markdownPage .main .body pre .language-Rust .hljs-keyword, .markdownPage .main .body pre .language-cpp .hljs-keyword {
   color: #0033B3;
 }
-.article .main .body pre .language-Rust .hljs-number, .article .main .body pre .language-cpp .hljs-number {
+.markdownPage .main .body pre .language-Rust .hljs-number, .markdownPage .main .body pre .language-cpp .hljs-number {
   color: #1750EB;
 }
-.article .main .body pre .language-Rust .hljs-title, .article .main .body pre .language-cpp .hljs-title {
+.markdownPage .main .body pre .language-Rust .hljs-title, .markdownPage .main .body pre .language-cpp .hljs-title {
   color: #00627A;
 }
-.article .main .body pre .language-Rust .hljs-built_in, .article .main .body pre .language-cpp .hljs-built_in {
+.markdownPage .main .body pre .language-Rust .hljs-built_in, .markdownPage .main .body pre .language-cpp .hljs-built_in {
   color: #d75d0e;
 }
-.article .main .body pre .language-Rust .hljs-annotation, .article .main .body pre .language-cpp .hljs-annotation {
+.markdownPage .main .body pre .language-Rust .hljs-annotation, .markdownPage .main .body pre .language-cpp .hljs-annotation {
   color: #9E880D;
 }
-.article .main .body pre .language-Rust .hljs-comment, .article .main .body pre .language-cpp .hljs-comment {
+.markdownPage .main .body pre .language-Rust .hljs-comment, .markdownPage .main .body pre .language-cpp .hljs-comment {
   color: #8C8C8C;
 }
-.article .main .body pre .language-Rust .hljs-string, .article .main .body pre .language-cpp .hljs-string {
+.markdownPage .main .body pre .language-Rust .hljs-string, .markdownPage .main .body pre .language-cpp .hljs-string {
   color: #067D17;
 }
-.article .main .body a {
+.markdownPage .main .body a {
   background-color: #ffedd8;
   color: #644017;
   text-decoration: unset;
   border-radius: 4px;
   transition: all 200ms;
 }
-.article .main .body a:hover {
+.markdownPage .main .body a:hover {
   background-color: #f8e1c8;
   color: #502d04;
 }
-.article .main .body h1, .article .main .body h2, .article .main .body h3, .article .main .body h4, .article .main .body h5, .article .main .body h6 {
+.markdownPage .main .body h1, .markdownPage .main .body h2, .markdownPage .main .body h3, .markdownPage .main .body h4, .markdownPage .main .body h5, .markdownPage .main .body h6 {
   cursor: pointer;
   width: fit-content;
   box-sizing: border-box;
@@ -482,7 +508,7 @@ input {
   position: relative;
   overflow: visible;
 }
-.article .main .body h1:hover:before, .article .main .body h2:hover:before, .article .main .body h3:hover:before, .article .main .body h4:hover:before, .article .main .body h5:hover:before, .article .main .body h6:hover:before {
+.markdownPage .main .body h1:hover:before, .markdownPage .main .body h2:hover:before, .markdownPage .main .body h3:hover:before, .markdownPage .main .body h4:hover:before, .markdownPage .main .body h5:hover:before, .markdownPage .main .body h6:hover:before {
   content: "";
   position: absolute;
   font-weight: lighter;
@@ -491,30 +517,30 @@ input {
   font-size: 0.8rem;
   left: -20px;
 }
-.article .main .body h1 {
+.markdownPage .main .body h1 {
   font-size: 2.4rem;
   line-height: 6rem;
   font-weight: 600;
   font-family: J_Bold, sans-serif;
 }
-.article .main .body h1:hover:before {
+.markdownPage .main .body h1:hover:before {
   content: "h1";
 }
-.article .main .body h2 {
+.markdownPage .main .body h2 {
   font-size: 2rem;
   line-height: 4rem;
   font-weight: 400;
   font-family: J_Bold, sans-serif;
 }
-.article .main .body h2:hover:before {
+.markdownPage .main .body h2:hover:before {
   content: "h2";
 }
-.article .main .body h3 {
+.markdownPage .main .body h3 {
   font-size: 2rem;
   line-height: 4rem;
   font-family: J_Bold, sans-serif;
 }
-.article .main .body h3:hover:before {
+.markdownPage .main .body h3:hover:before {
   content: "h3";
 }
 
@@ -549,6 +575,272 @@ input {
   width: 300px;
 }
 
+.collection_page {
+  padding-top: 20px;
+  position: relative;
+  min-height: calc(100vh - 72px);
+}
+.collection_page .main_section {
+  display: flex;
+}
+.collection_page .article_panel {
+  flex: 6;
+}
+.collection_page .article_panel svg {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+.collection_page .article_panel div {
+  font-family: light, sans-serif;
+}
+.collection_page .collection_package {
+  background-color: white;
+  flex: 4;
+  padding: 0 20px;
+  border-right: 1px solid #f3f3f3;
+  height: max-content;
+}
+.collection_page .collection_package .empty_list, .collection_page .collection_package .list {
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+}
+.collection_page .collection_package .collection_list_item {
+  height: 64px;
+}
+.collection_page .collection_package .collection_list_item .collection_name {
+  text-wrap: normal;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+.collection_page .breadcrumb {
+  z-index: 20;
+  flex: 1;
+  color: #5e5e75;
+  display: flex;
+  position: sticky;
+  top: 92px;
+  background-color: white;
+  height: fit-content;
+}
+.collection_page .breadcrumb .crumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+.collection_page .breadcrumb .crumb:hover {
+  color: #3a3636;
+  background-color: #f3f3f3;
+}
+.collection_page .breadcrumb .crumb:last-child {
+  color: #ffffff;
+  font-weight: 400;
+  background-color: #000000;
+}
+.collection_page .breadcrumb .preSlash {
+  position: relative;
+}
+.collection_page .breadcrumb .preSlash:before {
+  content: "/";
+  color: #000;
+  left: -10px;
+  position: absolute;
+}
+
+@font-face {
+  font-display: block;
+  font-family: "Noto_Light";
+  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+}
+@font-face {
+  font-display: block;
+  font-family: "Noto_Medium";
+  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+}
+@font-face {
+  font-display: block;
+  font-family: "J_Medium";
+  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+}
+@font-face {
+  font-family: "J_Regular";
+  src: url("./font/ttf/JetBrainsMono-Regular.ttf");
+}
+@font-face {
+  font-family: "J_Light";
+  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+}
+@font-face {
+  font-family: "J_Bold";
+  src: url("./font/ttf/JetBrainsMono-Bold.ttf");
+}
+@font-face {
+  font-family: "medium";
+  src: url("font/medium.woff2");
+}
+@font-face {
+  font-family: "bold";
+  src: url("font/bold.woff2");
+}
+@font-face {
+  font-family: "black";
+  src: url("font/black.woff2");
+}
+@font-face {
+  font-family: "regular";
+  src: url("font/regular.woff2");
+}
+@font-face {
+  font-family: "light";
+  src: url("font/light.woff2");
+}
+.momentPage {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.tip {
+  margin: 0 auto;
+  line-height: 200px;
+  color: #494646;
+  font-size: 0.8rem;
+  font-family: light, sans-serif;
+}
+
+@font-face {
+  font-display: block;
+  font-family: "Noto_Light";
+  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+}
+@font-face {
+  font-display: block;
+  font-family: "Noto_Medium";
+  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+}
+@font-face {
+  font-display: block;
+  font-family: "J_Medium";
+  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+}
+@font-face {
+  font-family: "J_Regular";
+  src: url("./font/ttf/JetBrainsMono-Regular.ttf");
+}
+@font-face {
+  font-family: "J_Light";
+  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+}
+@font-face {
+  font-family: "J_Bold";
+  src: url("./font/ttf/JetBrainsMono-Bold.ttf");
+}
+@font-face {
+  font-family: "medium";
+  src: url("font/medium.woff2");
+}
+@font-face {
+  font-family: "bold";
+  src: url("font/bold.woff2");
+}
+@font-face {
+  font-family: "black";
+  src: url("font/black.woff2");
+}
+@font-face {
+  font-family: "regular";
+  src: url("font/regular.woff2");
+}
+@font-face {
+  font-family: "light";
+  src: url("font/light.woff2");
+}
+.discoverPage {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  padding-top: 200px;
+  justify-content: center;
+}
+.discoverPage .img {
+  position: relative;
+  overflow: visible;
+}
+
+@font-face {
+  font-display: block;
+  font-family: "Noto_Light";
+  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+}
+@font-face {
+  font-display: block;
+  font-family: "Noto_Medium";
+  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+}
+@font-face {
+  font-display: block;
+  font-family: "J_Medium";
+  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+}
+@font-face {
+  font-family: "J_Regular";
+  src: url("./font/ttf/JetBrainsMono-Regular.ttf");
+}
+@font-face {
+  font-family: "J_Light";
+  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+}
+@font-face {
+  font-family: "J_Bold";
+  src: url("./font/ttf/JetBrainsMono-Bold.ttf");
+}
+@font-face {
+  font-family: "medium";
+  src: url("font/medium.woff2");
+}
+@font-face {
+  font-family: "bold";
+  src: url("font/bold.woff2");
+}
+@font-face {
+  font-family: "black";
+  src: url("font/black.woff2");
+}
+@font-face {
+  font-family: "regular";
+  src: url("font/regular.woff2");
+}
+@font-face {
+  font-family: "light";
+  src: url("font/light.woff2");
+}
+.portfolioPage {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.portfolioPage * {
+  user-select: text;
+}
+.current {
+  background-color: #124dd7;
+  color: #ffffff;
+  border-radius: 4px;
+}
+.current:hover {
+  background-color: #1a48ab;
+  color: #ffffff;
+}
+
+.main {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -557,17 +849,20 @@ input {
   font-family: "Noto_Medium", "HarmonyOS Sans SC", "HarmonyOS Sans", "sans-serif";
 }
 
-.root {
-  position: relative;
-}
-
 ::-webkit-scrollbar {
   display: none;
 }
 
+#root {
+  width: 100vw;
+}
+
 .App {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .fill {
@@ -575,9 +870,13 @@ input {
   width: 100%;
 }
 
-.MainBox {
+/**/
+.main {
   position: relative;
-  height: calc(100vh - 72px);
+  min-height: calc(100vh - 72px);
+  max-width: 1300px;
+  margin: 72px auto 0;
+  padding-bottom: 400px;
 }
 
 .Pop {
@@ -585,6 +884,43 @@ input {
   position: fixed;
   top: 0;
   height: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f6f6f6;
+  color: #6c6c6c;
+  padding-top: 20px;
+}
+.footer * {
+  color: #383838;
+}
+.footer .footerContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.footer .icons_part {
+  display: flex;
+}
+.footer .icons_part svg {
+  margin-right: 20px;
+  color: white;
+  width: 30px;
+  padding: 5px;
+  height: 30px;
+  border-radius: 6px;
+  transition: all 100ms;
+}
+.footer .icons_part svg:hover {
+  background-color: #000;
+  fill: white;
+}
+
+.aboutPage {
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=index.css.map */

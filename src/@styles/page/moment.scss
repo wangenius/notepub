@@ -1,0 +1,14 @@
+@import "../const";
+
+.momentPage{
+  max-width: $maxWidth;
+  margin: 0 auto;
+}
+
+.tip{
+  margin: 0 auto;
+  line-height: 200px;
+  color: #494646;
+  font-size: 0.8rem;
+  font-family: light, sans-serif;
+}

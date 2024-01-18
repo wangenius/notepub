@@ -1,1 +1,10 @@
-@import "article";
+@import "collection";
+@import "moment";
+@import "discover";
+@import "portfolio";
+@import "markdown";
+
+.main{
+  max-width: $maxWidth;
+  margin: 0 auto;
+}

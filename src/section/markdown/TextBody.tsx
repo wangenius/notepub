@@ -1,10 +1,4 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
-import {atomOneDark} from "react-syntax-highlighter/dist/cjs/styles/hljs";
-import {vs as style} from "react-syntax-highlighter/dist/cjs/styles/prism";
-
-export const TextBody = () => {
-  return <div></div>;
-};
 
 // 定义一个代码块样式，官网给出的案例
 export const code = ({ node, inline, className, children, ...props }: any) => {
@@ -14,7 +8,7 @@ export const code = ({ node, inline, className, children, ...props }: any) => {
     <SyntaxHighlighter
       children={String(children).replace(/\n$/, "")}
       language={match[1]}
-      style={{ }}
+      style={{}}
       PreTag="div"
       {...props}
     />
@@ -23,6 +17,3 @@ export const code = ({ node, inline, className, children, ...props }: any) => {
   );
 };
 
-export const a = ({ ...props }) => {
-  return <a className={"link"} {...props}/>;
-};

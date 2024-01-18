@@ -23,7 +23,7 @@ export const directorySlice = createSlice({
     },
     setRootDirectory: (state, action: PayloadAction<Directory>) => {
       return Object.assign({}, state, {
-        crumbs: action.payload,
+        rootDirectory: action.payload,
       });
     },
   },

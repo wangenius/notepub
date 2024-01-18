@@ -1,18 +1,16 @@
 import { Header } from "./Header";
 import { Outlet } from "react-router-dom";
-import { PopContainer } from "./PopProvider";
+import { Footer } from "./Footer";
 
 function App() {
   return (
     <>
-
       <div className="App">
         <Header />
-          <div className={"fill"}/>
-          <div className={"MainBox"}>
-              <Outlet />
-          </div>
-
+        <div className={"main"}>
+          <Outlet />
+        </div>
+        <Footer />
       </div>
     </>
   );

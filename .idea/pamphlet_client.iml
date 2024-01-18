@@ -8,5 +8,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="widgets" level="application" />
+    <orderEntry type="library" name="inter" level="application" />
+    <orderEntry type="library" name="flowbite" level="application" />
   </component>
 </module>

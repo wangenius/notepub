@@ -1,9 +1,8 @@
 export enum RoutesApi {
-  "discover",
   "article",
+"collection",
   "portfolio",
-  "moment",
-  "about"
+  "about",
 }
 
 export type RoutesKey = keyof typeof RoutesApi;

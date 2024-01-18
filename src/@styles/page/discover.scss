@@ -1,0 +1,15 @@
+@import "../const";
+.discoverPage{
+  max-width: $maxWidth;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+
+  padding-top: 200px;
+  justify-content: center;
+  .img{
+    position: relative;
+    overflow: visible;
+  }
+
+}
