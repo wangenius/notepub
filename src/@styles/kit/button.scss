@@ -1,22 +1,6 @@
 @import "../const";
 
-button {
-  box-sizing: border-box;
-  background-color: transparent;
-  padding: 4px 10px;
-  border: 2px solid transparent;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  color: $button_default_font;
-  border-radius: 12px;
-  white-space: nowrap;
-  transition-duration: 100ms;
 
-  &:hover {
-    color: $button_hover_font;
-    background-color: $hover_bc;
-  }
-}
 
 .button_menu {
   button {

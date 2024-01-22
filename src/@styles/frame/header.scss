@@ -1,29 +1,17 @@
 @import "../const";
 
-.header{
+.header {
   display: flex;
-  z-index: 200;
+  z-index: 600;
   position: fixed;
   width: 100%;
+  border-bottom: 1px solid #f3f3f3;
   background-color: white;
-  padding: 5px calc((100vw - $maxWidth)/2);
+  padding: 5px calc((100vw - $maxWidth) / 2);
   height: $header_height;
   align-items: center;
   top: 0;
-  .shadow::before{
-    content: '';
-    box-shadow: 0 0 10px 1px #333;
-    position: fixed;
-    width: 100%;
-  }
-  .shadow::after{
-    content: '';
-    width: 100%;
-    height: $header_height;
-    background: linear-gradient(to bottom, #fff 50% , transparent);
-    position: absolute;
-  }
-  .title{
+  .title {
     flex: 1;
     margin-left: 10px;
     text-transform: uppercase;
@@ -31,14 +19,26 @@
     font-weight: bold;
     letter-spacing: 0.5rem;
   }
+  button {
+    box-sizing: border-box;
+    background-color: transparent;
+    padding: 4px 10px;
+    border: 2px solid transparent;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: $button_default_font;
+    border-radius: 12px;
+    white-space: nowrap;
+    transition-duration: 100ms;
 
-  .nav_button{
-
+    &:hover {
+      color: $button_hover_font;
+      background-color: $hover_bc;
+    }
   }
-
 }
 
-.outlet{
+.outlet {
   z-index: 0;
-  padding-top:$header_height;
+  padding-top: $header_height;
 }

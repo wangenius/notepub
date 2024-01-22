@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import App from "./App";
 import { CollectionPage } from "../section/collection/CollectionPage";
-import { About } from "../section/about/About";
 import { useCallback } from "react";
 import { RoutesKey, RoutesList } from "../@const/const";
 import { PortfolioPage } from "../section/portfolio/PortfolioPage";
@@ -16,12 +15,7 @@ export function useNav() {
 }
 
 export const Router = () => {
-  const items = [
-    <MarkdownPage />,
-    <CollectionPage />,
-    <PortfolioPage />,
-    <About />,
-  ];
+  const items = [<MarkdownPage />, <CollectionPage />, <PortfolioPage />];
 
   return (
     <BrowserRouter>

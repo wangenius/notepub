@@ -4,8 +4,8 @@ import storage from "redux-persist/lib/storage";
 import thunk from "redux-thunk";
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import { articleSlice } from "./articleSlice";
-import { directorySlice } from "./directorySlice";
+import { sheetSlice } from "./sheetSlice";
+import { collectionSlice } from "./collectionSlice";
 
 type RootState = ReturnType<typeof store.getState>;
 type AppDispatch = typeof store.dispatch;
@@ -21,8 +21,8 @@ const storageConfig = {
 
 //组合压缩器
 const combinedReducer = combineReducers({
-  article: articleSlice.reducer,
-  directory: directorySlice.reducer,
+  sheet: sheetSlice.reducer,
+  collection: collectionSlice.reducer,
 });
 
 /** @Description 持久化*/
