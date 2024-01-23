@@ -1,6 +1,38 @@
 import { memo, ReactNode } from "react";
 import { Fn } from "../@types/main";
 
+export const Logo = () => {
+  return (
+    <svg
+      id="Layer_2"
+      data-name="Layer 2"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 381 381"
+    >
+      <g id="Layer_1-2" data-name="Layer 1">
+        <rect x="0" y="0" width="381" height="381" rx="190.5" ry="190.5" />
+        <path
+          fill={"#fff"}
+          style={{
+            boxShadow: "2px 0 8px 8px #fff2c1",
+          }}
+          stroke={"#000"}
+          strokeWidth={"2px"}
+          className="cls-2"
+          d="M137.5,104.5s-61,75.23-44,226c0,0,102-87.15,173-5,0,0,28-124.23-21-217.01-49-92.78-108-3.99-108-3.99Z"
+        />
+        <circle
+          className="cls-1"
+          fill={"#f2f2f2"}
+          stroke={"#fff"}
+          cx="201"
+          cy="42"
+          r="7.5"
+        />
+      </g>
+    </svg>
+  );
+};
 export const IconButton = memo(
   ({
     children,
@@ -78,7 +110,7 @@ export namespace Icons {
       >
         <path
           d="M4 9.3C4 9.15858 4 9.08787 4.04393 9.04393C4.08787 9 4.15858 9 4.3 9H19.7C19.8414 9 19.9121 9 19.9561 9.04393C20 9.08787 20 9.15858 20 9.3V16C20 17.8856 20 18.8284 19.4142 19.4142C18.8284 20 17.8856 20 16 20H8C6.11438 20 5.17157 20 4.58579 19.4142C4 18.8284 4 17.8856 4 16V9.3Z"
-          fill='#c68b00'
+          fill="#c68b00"
           fillOpacity="0.24"
         />
         <path

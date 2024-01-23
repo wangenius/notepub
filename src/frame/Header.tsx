@@ -1,25 +1,35 @@
 import { Button } from "../@kit/Button";
 import clsx from "clsx";
 import { useNav } from "./Router";
-import { RoutesApi, RoutesKey } from "../@const/const";
-import _ from "lodash";
+import { api } from "../axios/collection";
+import { collectionSlice } from "../store/collectionSlice";
+import { Collection } from "../@types/sheet";
+import { useAppDispatch } from "../store/store";
+import { Logo } from "../@kit/Icon";
 
 export const Header = () => {
   const { nav } = useNav();
+  const dispatch = useAppDispatch();
   return (
     <div className={"header"}>
-      <div className="title" onClick={() => {}}>
-        Pamphlet
+      <div
+        className="title"
+        onClick={() => {
+          api.collection.renovate().then((res) => {
+            dispatch(
+              collectionSlice.actions.setCollections(
+                (res.data as Collection).sub,
+              ),
+            );
+          });
+        }}
+      >
+        <Logo />
+        山野雾灯
       </div>
       <div className={clsx("button_menu", "nav_button")}>
-        {_.drop(
-          (Object.keys(RoutesApi) as RoutesKey[]).slice(
-            Object.keys(RoutesApi).length / 2,
-            Object.keys(RoutesApi).length,
-          ),
-        ).map((item, key) => (
-          <Button key={key} children={item} click={() => nav(item)} />
-        ))}
+        <Button children={"缤纷乐园"} click={() => nav("collection")} />
+        <Button children={"独家村"} click={() => nav("portfolio")} />
       </div>
     </div>
   );

@@ -1,26 +1,26 @@
-import {instance} from "./axios";
+import { instance } from "./axios";
 
-export namespace api{
+export namespace api {
+  export abstract class collection {
+    static prefix = "/collection";
+    static renovate = async () => {
+      return await instance.get("/collection/renovate");
+    };
 
-    export abstract class collection{
+    static load = async () => {
+      return await instance.get("/collection/load");
+    };
+  }
 
-        static prefix = "/collection"
-        static renovate = async ()=>{
+  export abstract class sheet {
+    static load = async (path: string) => {
+      return await instance.get("/sheet/get?path=" + path);
+    };
+  }
 
-            return await instance.get("/collection/renovate")
-        }
-
-        static load = async ()=>{
-           return await instance.get("/collection/load")
-        }
-    }
-
-    export abstract class sheet {
-        static load = async (path:string)=>{
-            return await instance.post("/sheet/load",path)
-        }
-    }
-
-
-
+  export abstract class log {
+    static timeline = async () => {
+      return await instance.get("/log/timeline");
+    };
+  }
 }

@@ -1,6 +1,6 @@
 export enum RoutesApi {
-  "article",
-"collection",
+  "sheet",
+  "collection",
   "portfolio",
 }
 

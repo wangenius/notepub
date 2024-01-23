@@ -9,7 +9,7 @@ import "@szhsin/react-menu/dist/transitions/slide.css";
 import "./@styles/index.css";
 
 const InitRender = () => {
-  document.title = "Pamphlet - Repository of the Crossing Career";
+  document.title = "山野雾灯Mistlamp - Repository of the Crossing Career";
   createRoot(document.getElementById("root")!).render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
