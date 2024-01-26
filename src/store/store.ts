@@ -5,7 +5,8 @@ import thunk from "redux-thunk";
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { sheetSlice } from "./sheetSlice";
-import { collectionSlice } from "./collectionSlice";
+import { cabinSlice } from "./cabinSlice";
+import { sackSlice } from "./sackSlice";
 
 type RootState = ReturnType<typeof store.getState>;
 type AppDispatch = typeof store.dispatch;
@@ -22,7 +23,8 @@ const storageConfig = {
 //组合压缩器
 const combinedReducer = combineReducers({
   sheet: sheetSlice.reducer,
-  collection: collectionSlice.reducer,
+  cabin: cabinSlice.reducer,
+  sack: sackSlice.reducer,
 });
 
 /** @Description 持久化*/

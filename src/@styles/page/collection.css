@@ -2,346 +2,407 @@
 @import url("https://fonts.googleapis.com/css2?family=Amiko:wght@700&family=Roboto:ital,wght@0,500;0,700;1,500&family=Teko:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap");
+
 @font-face {
-  font-display: block;
-  font-family: "Noto_Light";
-  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+    font-display: block;
+    font-family: "Noto_Light";
+    src: url("./font/ttf/JetBrainsMono-Light.ttf");
 }
+
 @font-face {
-  font-display: block;
-  font-family: "Noto_Medium";
-  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+    font-display: block;
+    font-family: "Noto_Medium";
+    src: url("./font/ttf/JetBrainsMono-Medium.ttf");
 }
+
 @font-face {
-  font-display: block;
-  font-family: "J_Medium";
-  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+    font-display: block;
+    font-family: "J_Medium";
+    src: url("./font/ttf/JetBrainsMono-Medium.ttf");
 }
+
 @font-face {
-  font-family: "J_Regular";
-  src: url("./font/ttf/JetBrainsMono-Regular.ttf");
+    font-family: "J_Regular";
+    src: url("./font/ttf/JetBrainsMono-Regular.ttf");
 }
+
 @font-face {
-  font-family: "J_Light";
-  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+    font-family: "J_Light";
+    src: url("./font/ttf/JetBrainsMono-Light.ttf");
 }
+
 @font-face {
-  font-family: "J_Bold";
-  src: url("./font/ttf/JetBrainsMono-Bold.ttf");
+    font-family: "J_Bold";
+    src: url("./font/ttf/JetBrainsMono-Bold.ttf");
 }
+
 @font-face {
-  font-family: "medium";
-  src: url("font/medium.woff2");
+    font-family: "medium";
+    src: url("font/medium.woff2");
 }
+
 @font-face {
-  font-family: "bold";
-  src: url("font/bold.woff2");
+    font-family: "bold";
+    src: url("font/bold.woff2");
 }
+
 @font-face {
-  font-family: "black";
-  src: url("font/black.woff2");
+    font-family: "black";
+    src: url("font/black.woff2");
 }
+
 @font-face {
-  font-family: "regular";
-  src: url("font/regular.woff2");
+    font-family: "regular";
+    src: url("font/regular.woff2");
 }
+
 @font-face {
-  font-family: "light";
-  src: url("font/light.woff2");
+    font-family: "light";
+    src: url("font/light.woff2");
 }
+
 .markdownPage {
-  max-width: 1300px;
-  margin: 0 auto;
+    max-width: 1300px;
+    margin: 0 auto;
 }
+
 .markdownPage .main {
-  max-width: 1300px;
-  display: flex;
-  z-index: 1;
+    max-width: 1300px;
+    display: flex;
+    z-index: 1;
 }
+
 @media screen and (max-width: 900px) {
-  .markdownPage .main {
-    flex-direction: column;
-  }
+    .markdownPage .main {
+        flex-direction: column;
+    }
 }
+
 .markdownPage .main .content_Box {
-  width: 100%;
+    width: 100%;
 }
+
 .markdownPage .main .content_Box .directory_list {
-  margin-top: 10px;
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space-between;
-  grid-gap: 10px;
+    margin-top: 10px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    grid-gap: 10px;
 }
+
 .markdownPage .main .content_Box .directory_list .content_item {
-  height: 140px;
-  padding: 10px;
-  border-radius: 10px;
-  font-family: J_Light, sans-serif;
-  transition: all 200ms;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
+    height: 140px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: J_Light, sans-serif;
+    transition: all 200ms;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
 }
+
 .markdownPage .main .content_Box .directory_list .content_item .name {
-  transition: all 200ms;
-  font-size: 1.5rem;
-  white-space: nowrap;
-  font-family: light, sans-serif;
-  text-transform: uppercase;
+    transition: all 200ms;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    font-family: light, sans-serif;
+    text-transform: uppercase;
 }
+
 .markdownPage .main .content_Box .directory_list .content_item .info {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  font-size: 0.7rem;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.7rem;
 }
+
 .markdownPage .main .content_Box .directory_list .content_item:hover {
-  scale: 0.96;
-  box-shadow: 0 0 0 5px rgba(192, 192, 192, 0.5);
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    scale: 0.96;
+    box-shadow: 0 0 0 5px rgba(192, 192, 192, 0.5);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 .markdownPage .main .content_Box .directory_list .content_item:active {
-  scale: 0.9;
+    scale: 0.9;
 }
+
 .markdownPage .main .content_Box .articleFilesList {
-  width: 100%;
-  margin-top: 30px;
+    width: 100%;
+    margin-top: 30px;
 }
+
 .markdownPage .main .content_Box .articleFilesList .article_item {
-  display: flex;
-  align-items: center;
-  height: 60px;
-  width: 100%;
-  border-top: 1px solid #eaeaea;
-  padding: 20px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    border-top: 1px solid #eaeaea;
+    padding: 20px;
 }
+
 .markdownPage .main .content_Box .articleFilesList .article_item:first-of-type {
-  border-top: none;
+    border-top: none;
 }
+
 .markdownPage .main .content_Box .articleFilesList .article_item:hover {
-  background-color: #f6f6f6;
+    background-color: #f6f6f6;
 }
+
 .markdownPage .main .content_Box .articleFilesList .article_item .name {
-  font-family: light, sans-serif;
+    font-family: light, sans-serif;
 }
+
 @media screen and (min-width: 1200px) {
-  .markdownPage .main .content_Box .directory_list {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+    .markdownPage .main .content_Box .directory_list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
+
 @media screen and (max-width: 900px) {
-  .markdownPage .main .content_Box .directory_list {
-    grid-template-columns: 1fr 1fr;
-  }
+    .markdownPage .main .content_Box .directory_list {
+        grid-template-columns: 1fr 1fr;
+    }
 }
+
 @media screen and (max-width: 600px) {
-  .markdownPage .main .content_Box .directory_list {
-    grid-template-columns: 1fr;
-  }
+    .markdownPage .main .content_Box .directory_list {
+        grid-template-columns: 1fr;
+    }
 }
+
 .markdownPage .main .navigation {
-  position: sticky;
-  top: 140px;
-  height: fit-content;
-  width: 270px;
+    position: sticky;
+    top: 140px;
+    height: fit-content;
+    width: 270px;
 }
+
 .markdownPage .main .navigation .title-anchor {
-  display: block;
-  color: #606060;
-  background-color: #ffffff;
-  font-size: 0.8rem;
-  transition: all 0.2s;
-  margin: 0.3em 0;
-  line-height: 3em;
-  cursor: pointer;
-  border-radius: 10px;
+    display: block;
+    color: #606060;
+    background-color: #ffffff;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+    margin: 0.3em 0;
+    line-height: 3em;
+    cursor: pointer;
+    border-radius: 10px;
 }
+
 .markdownPage .main .navigation .title-anchor:hover {
-  background-color: #eeeeee;
+    background-color: #eeeeee;
 }
+
 .markdownPage .main .navigation .active {
-  color: #636f81;
-  background-color: #eeeeee;
+    color: #636f81;
+    background-color: #eeeeee;
 }
+
 .markdownPage .main .body {
-  flex: 1;
-  padding: 20px;
-  margin: 0 auto;
-  width: 1030px;
+    flex: 1;
+    padding: 20px;
+    margin: 0 auto;
+    width: 1030px;
 }
+
 .markdownPage .main .body * {
-  font-family: "HarmonyOS Sans SC", sans-serif;
-  font-weight: 300;
-  font-size: 0.96rem;
-  line-height: 2rem;
-  word-wrap: normal;
-  text-wrap: normal;
-  user-select: text;
+    font-family: "HarmonyOS Sans SC", sans-serif;
+    font-weight: 300;
+    font-size: 0.96rem;
+    line-height: 2rem;
+    word-wrap: normal;
+    text-wrap: normal;
+    user-select: text;
 }
+
 .markdownPage .main .body .inlineCode {
-  background-color: rgb(245, 245, 245);
-  color: rgb(56, 58, 66);
-  border-radius: 6px;
-  padding: 0 6px;
-  font-family: J_Light, sans-serif;
-  font-weight: lighter;
+    background-color: rgb(245, 245, 245);
+    color: rgb(56, 58, 66);
+    border-radius: 6px;
+    padding: 0 6px;
+    font-family: J_Light, sans-serif;
+    font-weight: lighter;
 }
+
 .markdownPage .main .body pre div {
-  background: rgb(245, 245, 245) !important;
-  color: rgb(56, 58, 66);
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  tab-size: 2;
-  hyphens: none;
-  padding: 1em;
-  margin: 0.5em 0;
-  overflow: auto;
-  border-radius: 0.6em;
-  border: 1px solid rgb(245, 245, 245);
-  transition: all 200ms;
+    background: rgb(245, 245, 245) !important;
+    color: rgb(56, 58, 66);
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    tab-size: 2;
+    hyphens: none;
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+    border-radius: 0.6em;
+    border: 1px solid rgb(245, 245, 245);
+    transition: all 200ms;
 }
+
 .markdownPage .main .body pre div:hover {
-  background: #f6f6f6 !important;
-  border: 1px solid #d5d5d5;
+    background: #f6f6f6 !important;
+    border: 1px solid #d5d5d5;
 }
+
 .markdownPage .main .body pre .language-Rust, .markdownPage .main .body pre .language-cpp {
-  font-family: J_Light, sans-serif;
-  background: transparent;
-  color: rgb(56, 58, 66);
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  line-height: 0.9rem;
-  tab-size: 2;
-  hyphens: none;
-  font-weight: lighter;
+    font-family: J_Light, sans-serif;
+    background: transparent;
+    color: rgb(56, 58, 66);
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 0.9rem;
+    tab-size: 2;
+    hyphens: none;
+    font-weight: lighter;
 }
+
 .markdownPage .main .body pre .language-Rust span, .markdownPage .main .body pre .language-cpp span {
-  font-family: J_Light, sans-serif;
-  font-weight: lighter;
-  font-size: 0.9rem;
-  line-height: 0.9rem;
+    font-family: J_Light, sans-serif;
+    font-weight: lighter;
+    font-size: 0.9rem;
+    line-height: 0.9rem;
 }
+
 .markdownPage .main .body pre .language-Rust .hljs-keyword, .markdownPage .main .body pre .language-cpp .hljs-keyword {
-  color: #0033B3;
+    color: #0033B3;
 }
+
 .markdownPage .main .body pre .language-Rust .hljs-number, .markdownPage .main .body pre .language-cpp .hljs-number {
-  color: #1750EB;
+    color: #1750EB;
 }
+
 .markdownPage .main .body pre .language-Rust .hljs-title, .markdownPage .main .body pre .language-cpp .hljs-title {
-  color: #00627A;
+    color: #00627A;
 }
+
 .markdownPage .main .body pre .language-Rust .hljs-built_in, .markdownPage .main .body pre .language-cpp .hljs-built_in {
-  color: #d75d0e;
+    color: #d75d0e;
 }
+
 .markdownPage .main .body pre .language-Rust .hljs-annotation, .markdownPage .main .body pre .language-cpp .hljs-annotation {
-  color: #9E880D;
+    color: #9E880D;
 }
+
 .markdownPage .main .body pre .language-Rust .hljs-comment, .markdownPage .main .body pre .language-cpp .hljs-comment {
-  color: #8C8C8C;
+    color: #8C8C8C;
 }
+
 .markdownPage .main .body pre .language-Rust .hljs-string, .markdownPage .main .body pre .language-cpp .hljs-string {
-  color: #067D17;
+    color: #067D17;
 }
+
 .markdownPage .main .body a {
-  background-color: #ffedd8;
-  color: #644017;
-  text-decoration: unset;
-  border-radius: 4px;
-  transition: all 200ms;
+    background-color: #ffedd8;
+    color: #644017;
+    text-decoration: unset;
+    border-radius: 4px;
+    transition: all 200ms;
 }
+
 .markdownPage .main .body a:hover {
-  background-color: #f8e1c8;
-  color: #502d04;
+    background-color: #f8e1c8;
+    color: #502d04;
 }
+
 .markdownPage .main .body h1, .markdownPage .main .body h2, .markdownPage .main .body h3, .markdownPage .main .body h4, .markdownPage .main .body h5, .markdownPage .main .body h6 {
-  cursor: pointer;
-  width: fit-content;
-  box-sizing: border-box;
-  padding: 0 10px;
-  margin-left: -10px;
-  transition: all 200ms;
-  border-radius: 20px;
-  position: relative;
-  overflow: visible;
+    cursor: pointer;
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin-left: -10px;
+    transition: all 200ms;
+    border-radius: 20px;
+    position: relative;
+    overflow: visible;
 }
+
 .markdownPage .main .body h1:hover:before, .markdownPage .main .body h2:hover:before, .markdownPage .main .body h3:hover:before, .markdownPage .main .body h4:hover:before, .markdownPage .main .body h5:hover:before, .markdownPage .main .body h6:hover:before {
-  content: "";
-  position: absolute;
-  font-weight: lighter;
-  font-family: J_Light, sans-serif;
-  color: #777777;
-  font-size: 0.8rem;
-  left: -20px;
+    content: "";
+    position: absolute;
+    font-weight: lighter;
+    font-family: J_Light, sans-serif;
+    color: #777777;
+    font-size: 0.8rem;
+    left: -20px;
 }
+
 .markdownPage .main .body h1 {
-  font-size: 2.4rem;
-  line-height: 6rem;
-  font-weight: 600;
-  font-family: J_Bold, sans-serif;
+    font-size: 2.4rem;
+    line-height: 6rem;
+    font-weight: 600;
+    font-family: J_Bold, sans-serif;
 }
+
 .markdownPage .main .body h1:hover:before {
-  content: "h1";
+    content: "h1";
 }
+
 .markdownPage .main .body h2 {
-  font-size: 2rem;
-  line-height: 4rem;
-  font-weight: 400;
-  font-family: J_Bold, sans-serif;
+    font-size: 2rem;
+    line-height: 4rem;
+    font-weight: 400;
+    font-family: J_Bold, sans-serif;
 }
+
 .markdownPage .main .body h2:hover:before {
-  content: "h2";
+    content: "h2";
 }
+
 .markdownPage .main .body h3 {
-  font-size: 2rem;
-  line-height: 4rem;
-  font-family: J_Bold, sans-serif;
+    font-size: 2rem;
+    line-height: 4rem;
+    font-family: J_Bold, sans-serif;
 }
+
 .markdownPage .main .body h3:hover:before {
-  content: "h3";
+    content: "h3";
 }
 
 .menuPanel {
-  border: 1px solid #d2d2d9;
-  background-color: white;
-  border-radius: 10px;
-  padding: 3px;
+    border: 1px solid #d2d2d9;
+    background-color: white;
+    border-radius: 10px;
+    padding: 3px;
 }
+
 .menuPanel * {
-  background-color: white;
+    background-color: white;
 }
+
 .menuPanel .menuPanel_item {
-  display: block;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  margin: 3px;
-  white-space: nowrap;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin: 3px;
+    white-space: nowrap;
 }
+
 .menuPanel .menuPanel_item:hover {
-  color: #3a3636;
-  background-color: #f3f3f3;
+    color: #3a3636;
+    background-color: #f3f3f3;
 }
 
 .rootBoxPanel {
-  display: grid;
-  width: 800px;
+    display: grid;
+    width: 800px;
 }
+
 .rootBoxPanel .rootBox {
-  height: 100px;
-  width: 300px;
+    height: 100px;
+    width: 300px;
 }
 
 .collectionSide {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  border: 1px solid #5e5e75;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border: 1px solid #5e5e75;
 }
 
 /*# sourceMappingURL=collection.css.map */

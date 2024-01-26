@@ -1,25 +1,23 @@
 import { Button } from "../@kit/Button";
 import clsx from "clsx";
-import { useNav } from "./Router";
-import { api } from "../axios/collection";
-import { collectionSlice } from "../store/collectionSlice";
-import { Collection } from "../@types/sheet";
+import { api } from "../axios/api";
+import { cabinSlice } from "../store/cabinSlice";
+import { Cabin } from "../@types/sheet";
 import { useAppDispatch } from "../store/store";
 import { Logo } from "../@kit/Icon";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
-  const { nav } = useNav();
+  const nav = useNavigate();
   const dispatch = useAppDispatch();
   return (
     <div className={"header"}>
       <div
         className="title"
         onClick={() => {
-          api.collection.renovate().then((res) => {
+          api.cabin.renovate().then((res) => {
             dispatch(
-              collectionSlice.actions.setCollections(
-                (res.data as Collection).sub,
-              ),
+              cabinSlice.actions.setCartons((res.data as Cabin).cartons),
             );
           });
         }}
@@ -28,8 +26,8 @@ export const Header = () => {
         山野雾灯
       </div>
       <div className={clsx("button_menu", "nav_button")}>
-        <Button children={"缤纷乐园"} click={() => nav("collection")} />
-        <Button children={"独家村"} click={() => nav("portfolio")} />
+        <Button children={"村屋"} click={() => nav("../cabin")} />
+        <Button children={"一麻袋小玩意"} click={() => nav("../sack")} />
       </div>
     </div>
   );

@@ -13,9 +13,16 @@
   font-family: $default_font_family;
 }
 
+html {
+  overflow-y: scroll;
+}
 
 ::-webkit-scrollbar {
   //display: none;
+}
+::-webkit-scrollbar-track {
+  //display: none;
+  background-color: transparent;
 }
 
 #root {
@@ -34,6 +41,7 @@
   height: $main_height;
   width: 100%;
   margin: $header_height auto 0;
+  max-width: $maxWidth;
 }
 
 
@@ -68,6 +76,7 @@
 //    }
 //  }
 //}
+
 
 //::-webkit-scrollbar {
 //  border-radius: 10px;

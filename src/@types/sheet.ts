@@ -3,12 +3,23 @@ export interface Time {
   modify: string;
 }
 
-export interface Collection {
+export interface Cabin {
+  cartons: Carton[];
+}
+
+export interface Wrap {
   name: string;
   path: string;
   time: Time;
-  sub: Collection[];
+  sub: Wrap[];
   sheets: Sheet[];
+}
+
+export interface Carton {
+  name: string;
+  path: string;
+  time: Time;
+  wraps: Wrap[];
   info: {
     common?: {
       tags?: string[];

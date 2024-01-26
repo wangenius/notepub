@@ -1,29 +1,20 @@
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./App";
-import { CollectionPage } from "../section/collection/CollectionPage";
-import { useCallback } from "react";
-import { RoutesKey } from "../@const/const";
-import { PortfolioPage } from "../section/portfolio/PortfolioPage";
-import { MarkdownPage } from "../section/markdown/MarkdownPage";
-
-export function useNav() {
-  const Nav = useNavigate();
-  const nav = useCallback((routes: RoutesKey) => {
-    Nav("../" + routes);
-  }, []);
-  return { nav };
-}
+import { CabinPage } from "../section/cabin/CabinPage";
+import { SackPage } from "../section/sack/SackPage";
+import { SheetPage } from "../section/sheet/SheetPage";
+import GadgetPage from "../section/sack/GadgetPage";
 
 export const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path={""} element={<CollectionPage />} />
-          <Route path={`sheet/:collection`} element={<MarkdownPage />} />
-
-          <Route path={"collection"} element={<CollectionPage />} />
-          <Route path={"portfolio"} element={<PortfolioPage />} />
+          <Route path={""} element={<CabinPage />} />
+          <Route path={"cabin"} element={<CabinPage />} />
+          <Route path={`cabin/:collection`} element={<SheetPage />} />
+          <Route path={"gadget"} element={<GadgetPage />} />
+          <Route path={"sack"} element={<SackPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

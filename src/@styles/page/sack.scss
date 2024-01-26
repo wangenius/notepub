@@ -1,0 +1,44 @@
+@import "../const";
+
+.portfolioPage {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
+
+  * {
+    user-select: text;
+  }
+
+  .product {
+  }
+}
+
+.gadget {
+  margin: 10px;
+
+  .about {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box; //作为弹性伸缩盒子模型显示。
+    -webkit-box-orient: vertical; //设置伸缩盒子的子元素排列方式--从上到下垂直排列
+    -webkit-line-clamp: 3; //显示的行
+    height: 60px;
+  }
+}
+
+.gadget_page {
+  max-width: $maxWidth - 600px;
+  margin: 0 auto;
+
+  .title {
+    padding-top: 20px;
+    color: rgb(37, 24, 56 / 3);
+    font-size: 48px;
+  }
+
+  .description {
+    color: rgb(107 114 128);
+    font-size: 0.9rem;
+    padding-bottom: 10px;
+  }
+}

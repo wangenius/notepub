@@ -10,6 +10,26 @@
 }
 
 @font-face {
+  font-family: "tego";
+  src: url("./font/NewTegomin-Regular.ttf");
+}
+
+@font-face {
+  font-family: "ebas";
+  src: url("./font/ebas927.ttf");
+}
+
+@font-face {
+  font-family: "yyys";
+  src: url("./font/yyys.ttf");
+}
+
+@font-face {
+  font-family: "kur";
+  src: url("./font/Kurland.ttf");
+}
+
+@font-face {
   font-display: block;
   font-family: "Noto_Medium";
   src: url("./font/ttf/JetBrainsMono-Medium.ttf");
@@ -61,15 +81,40 @@
   src: url("font/light.woff2");
 }
 
+@font-face {
+  font-family: 'h-medium';
+  src: url("font/HarmonyOS_Sans_SC_Medium.ttf");
+}
+
+@font-face {
+  font-family: 'h-regular';
+  src: url("font/HarmonyOS_Sans_SC_Regular.ttf");
+}
+
+@font-face {
+  font-family: 'h-light';
+  src: url("font/HarmonyOS_Sans_SC_Light.ttf");
+}
+
+@font-face {
+  font-family: 'h-bold';
+  src: url("font/HarmonyOS_Sans_SC_Bold.ttf");
+}
+
+@font-face {
+  font-family: 'h-thin';
+  src: url("font/HarmonyOS_Sans_SC_Thin.ttf");
+}
+
 $header_shad: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
 //height
 $header_height: 72px;
 $main_height: calc(100vh - $header_height);
 
-$default_font_family: "Noto_Medium", "HarmonyOS Sans SC", "HarmonyOS Sans", "sans-serif";
+$default_font_family: "h-regular", "HarmonyOS Sans", "sans-serif";
 //color
-$button_hover_font: #124dd7;
+$button_hover_font: #191293;
 $button_default_font: #5e5e75;
 
 $hover_bc: rgba(241, 241, 241, 0.55);
@@ -79,3 +124,5 @@ $table_border: 1px solid #cecece;
 $title_height: 32px;
 $code_bc: rgb(250, 250, 250);
 $maxWidth: 1600px;
+
+$title_font: "kur", "yyys", sans-serif;

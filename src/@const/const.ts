@@ -1,33 +1,21 @@
-export enum RoutesApi {
-  "sheet",
-  "collection",
-  "portfolio",
-}
-
-export type RoutesKey = keyof typeof RoutesApi;
-
-export const RoutesList = (Object.keys(RoutesApi) as RoutesKey[]).slice(
-  Object.keys(RoutesApi).length / 2,
-  Object.keys(RoutesApi).length,
-);
 export const colors = [
-  "#EAE4E9",
-  "#FFF1E6",
-  "#FDE2E4",
-  "#FAD2E1",
-  "#E2ECE9",
-  "#BEE1E6",
-  "#F0EFEB",
-  "#DFE7FD",
-  "#CDDAFD",
-  "#eddcd2",
-  "#fff1e6",
-  "#fde2e4",
-  "#fad2e1",
-  "#c5dedd",
-  "#dbe7e4",
-  "#f0efeb",
-  "#d6e2e9",
-  "#bcd4e6",
-  "#99c1de",
+  "#702f66",
+  "#ff801d",
+  "#930f19",
+  "#720028",
+  "#236755",
+  "#0e8fa1",
+  "#f1c519",
+  "#0f2f86",
+  "#dc19cc",
+  "#e56923",
+  "#ff872a",
+  "#98129d",
+  "#ff3381",
+  "#21dad2",
+  "#0fe8b2",
+  "#eabc06",
+  "#3683ab",
+  "#914e18",
+  "#346281",
 ];
