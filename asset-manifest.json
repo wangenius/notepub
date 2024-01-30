@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/pamplet_client/static/css/main.556c247d.css",
+    "main.js": "/pamplet_client/static/js/main.36144300.js",
+    "static/media/yyys.ttf": "/pamplet_client/static/media/yyys.545df61afbd25a79064c.ttf",
+    "static/media/NewTegomin-Regular.ttf": "/pamplet_client/static/media/NewTegomin-Regular.31f1cc144557bae76bd3.ttf",
+    "static/media/ebas927.ttf": "/pamplet_client/static/media/ebas927.0ee7b0906f33d4de38b1.ttf",
+    "static/media/HarmonyOS_Sans_SC_Thin.ttf": "/pamplet_client/static/media/HarmonyOS_Sans_SC_Thin.88d6dd6988e7a2e242cb.ttf",
+    "static/media/HarmonyOS_Sans_SC_Light.ttf": "/pamplet_client/static/media/HarmonyOS_Sans_SC_Light.d74c47f6cd2037416298.ttf",
+    "static/media/HarmonyOS_Sans_SC_Regular.ttf": "/pamplet_client/static/media/HarmonyOS_Sans_SC_Regular.28c7a5780ddd11ae2446.ttf",
+    "static/media/HarmonyOS_Sans_SC_Medium.ttf": "/pamplet_client/static/media/HarmonyOS_Sans_SC_Medium.a62b956f4f1ad97a2950.ttf",
+    "static/media/HarmonyOS_Sans_SC_Bold.ttf": "/pamplet_client/static/media/HarmonyOS_Sans_SC_Bold.d625716e152049c1c80e.ttf",
+    "static/media/black.woff2": "/pamplet_client/static/media/black.6ece380b9fd61f515254.woff2",
+    "static/media/bold.woff2": "/pamplet_client/static/media/bold.f48b2ebebb811714e30a.woff2",
+    "static/media/medium.woff2": "/pamplet_client/static/media/medium.f16893c841b4dcdacad7.woff2",
+    "static/media/regular.woff2": "/pamplet_client/static/media/regular.edd68e725bfe5368258b.woff2",
+    "static/media/light.woff2": "/pamplet_client/static/media/light.a1b0199718ce88c2590e.woff2",
+    "static/media/Kurland.ttf": "/pamplet_client/static/media/Kurland.da33120369c5b871bd68.ttf",
+    "static/media/JetBrainsMono-Bold.ttf": "/pamplet_client/static/media/JetBrainsMono-Bold.a490f58c0f460cdc1a8d.ttf",
+    "static/media/JetBrainsMono-Light.ttf": "/pamplet_client/static/media/JetBrainsMono-Light.bba1eb1d4b5d17db0725.ttf",
+    "static/media/JetBrainsMono-Medium.ttf": "/pamplet_client/static/media/JetBrainsMono-Medium.4ae52e44830a12514ac9.ttf",
+    "static/media/JetBrainsMono-Regular.ttf": "/pamplet_client/static/media/JetBrainsMono-Regular.73fb7b7f0e68b372adfe.ttf",
+    "index.html": "/pamplet_client/index.html",
+    "main.556c247d.css.map": "/pamplet_client/static/css/main.556c247d.css.map",
+    "main.36144300.js.map": "/pamplet_client/static/js/main.36144300.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.556c247d.css",
+    "static/js/main.36144300.js"
+  ]
+}
