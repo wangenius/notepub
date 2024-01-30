@@ -10,6 +10,7 @@ export function SackPage() {
   const nav = useNavigate();
   useLayoutEffect(() => {
     api.sack.load().then((res) => {
+      console.log(res.data);
       setSack(res.data);
     });
   }, []);
