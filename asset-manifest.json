@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pamplet_client/static/css/main.556c247d.css",
-    "main.js": "/pamplet_client/static/js/main.36144300.js",
+    "main.css": "/pamplet_client/static/css/main.6fdca1a8.css",
+    "main.js": "/pamplet_client/static/js/main.333141bf.js",
     "static/media/yyys.ttf": "/pamplet_client/static/media/yyys.545df61afbd25a79064c.ttf",
     "static/media/NewTegomin-Regular.ttf": "/pamplet_client/static/media/NewTegomin-Regular.31f1cc144557bae76bd3.ttf",
     "static/media/ebas927.ttf": "/pamplet_client/static/media/ebas927.0ee7b0906f33d4de38b1.ttf",
@@ -21,11 +21,11 @@
     "static/media/JetBrainsMono-Medium.ttf": "/pamplet_client/static/media/JetBrainsMono-Medium.4ae52e44830a12514ac9.ttf",
     "static/media/JetBrainsMono-Regular.ttf": "/pamplet_client/static/media/JetBrainsMono-Regular.73fb7b7f0e68b372adfe.ttf",
     "index.html": "/pamplet_client/index.html",
-    "main.556c247d.css.map": "/pamplet_client/static/css/main.556c247d.css.map",
-    "main.36144300.js.map": "/pamplet_client/static/js/main.36144300.js.map"
+    "main.6fdca1a8.css.map": "/pamplet_client/static/css/main.6fdca1a8.css.map",
+    "main.333141bf.js.map": "/pamplet_client/static/js/main.333141bf.js.map"
   },
   "entrypoints": [
-    "static/css/main.556c247d.css",
-    "static/js/main.36144300.js"
+    "static/css/main.6fdca1a8.css",
+    "static/js/main.333141bf.js"
   ]
 }
