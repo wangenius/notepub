@@ -24,7 +24,7 @@
 @font-face {
   font-display: block;
   font-family: "Noto_Light";
-  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+  src: url("font/JetBrainsMono-Light.ttf");
 }
 @font-face {
   font-family: "tego";
@@ -45,24 +45,24 @@
 @font-face {
   font-display: block;
   font-family: "Noto_Medium";
-  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+  src: url("font/JetBrainsMono-Medium.ttf");
 }
 @font-face {
   font-display: block;
   font-family: "J_Medium";
-  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+  src: url("font/JetBrainsMono-Medium.ttf");
 }
 @font-face {
   font-family: "J_Regular";
-  src: url("./font/ttf/JetBrainsMono-Regular.ttf");
+  src: url("font/JetBrainsMono-Regular.ttf");
 }
 @font-face {
   font-family: "J_Light";
-  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+  src: url("font/JetBrainsMono-Light.ttf");
 }
 @font-face {
   font-family: "J_Bold";
-  src: url("./font/ttf/JetBrainsMono-Bold.ttf");
+  src: url("font/JetBrainsMono-Bold.ttf");
 }
 @font-face {
   font-family: "medium";
@@ -108,55 +108,70 @@
   display: flex;
   z-index: 600;
   position: fixed;
-  width: 100%;
-  border-bottom: 1px solid #f3f3f3;
+  width: fit-content;
+  margin: 0 auto;
   background-color: white;
-  padding: 5px calc((100vw - 1600px) / 2);
-  height: 72px;
+  height: 60px;
   align-items: center;
-  top: 0;
-}
-.header .title {
-  display: flex;
-  flex: 1;
-  margin-left: 10px;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  letter-spacing: 0.2rem;
-  align-items: center;
-  font-family: "kur", "yyys", sans-serif;
-}
-.header .title svg {
-  width: 48px;
-  margin-right: 20px;
+  justify-content: center;
+  top: 10px;
+  left: 0;
+  right: 0;
+  border-radius: 16px;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  padding: 0 10px;
+  gap: 0.5rem;
 }
 .header button {
-  box-sizing: border-box;
-  background-color: transparent;
-  padding: 4px 10px;
+  border-radius: 10px;
   border: 2px solid transparent;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  color: #5e5e75;
-  border-radius: 12px;
-  white-space: nowrap;
-  transition-duration: 100ms;
-  font-family: "tego", sans-serif;
-  letter-spacing: 0.2rem;
 }
 .header button:hover {
-  color: #191293;
+  background-color: rgb(255, 255, 255);
+  scale: 1.1;
+  border-color: #ede5fa;
+}
+.header button:active {
+  background-color: rgb(245, 245, 245);
+}
+.header .search {
+  display: flex;
+  letter-spacing: 0.2rem;
+  font-size: 0.9rem;
+  align-items: center;
+  color: #313131;
+  font-family: "HarmonyOS Sans SC", sans-serif;
+  position: relative;
+  border-radius: 10px;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  border: 2px solid transparent;
+}
+.header .search:hover {
+  border-color: #ede5fa;
+}
+.header .search:focus-within {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #513482;
+}
+.header .search svg {
+  margin: 12px;
+  width: 18px;
+  height: 18px;
+}
+.header .search input {
+  background-color: transparent;
+  padding: 20px 0;
 }
 
 .outlet {
   z-index: 0;
-  padding-top: 72px;
+  padding-top: 60px;
 }
 
 @font-face {
   font-display: block;
   font-family: "Noto_Light";
-  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+  src: url("font/JetBrainsMono-Light.ttf");
 }
 @font-face {
   font-family: "tego";
@@ -177,24 +192,24 @@
 @font-face {
   font-display: block;
   font-family: "Noto_Medium";
-  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+  src: url("font/JetBrainsMono-Medium.ttf");
 }
 @font-face {
   font-display: block;
   font-family: "J_Medium";
-  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+  src: url("font/JetBrainsMono-Medium.ttf");
 }
 @font-face {
   font-family: "J_Regular";
-  src: url("./font/ttf/JetBrainsMono-Regular.ttf");
+  src: url("font/JetBrainsMono-Regular.ttf");
 }
 @font-face {
   font-family: "J_Light";
-  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+  src: url("font/JetBrainsMono-Light.ttf");
 }
 @font-face {
   font-family: "J_Bold";
-  src: url("./font/ttf/JetBrainsMono-Bold.ttf");
+  src: url("font/JetBrainsMono-Bold.ttf");
 }
 @font-face {
   font-family: "medium";
@@ -236,10 +251,6 @@
   font-family: "h-thin";
   src: url("font/HarmonyOS_Sans_SC_Thin.ttf");
 }
-.button_menu button {
-  margin: 3px;
-}
-
 .popContainer {
   position: relative;
 }
@@ -295,16 +306,16 @@
 input {
   border: none;
   outline: none;
-  height: 48px;
+  height: 32px;
   border-radius: 14px;
   padding: 20px;
-  background-color: rgba(94, 94, 117, 0.062745098);
+  background-color: rgba(120, 120, 136, 0.06);
 }
 
 @font-face {
   font-display: block;
   font-family: "Noto_Light";
-  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+  src: url("font/JetBrainsMono-Light.ttf");
 }
 @font-face {
   font-family: "tego";
@@ -325,24 +336,24 @@ input {
 @font-face {
   font-display: block;
   font-family: "Noto_Medium";
-  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+  src: url("font/JetBrainsMono-Medium.ttf");
 }
 @font-face {
   font-display: block;
   font-family: "J_Medium";
-  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+  src: url("font/JetBrainsMono-Medium.ttf");
 }
 @font-face {
   font-family: "J_Regular";
-  src: url("./font/ttf/JetBrainsMono-Regular.ttf");
+  src: url("font/JetBrainsMono-Regular.ttf");
 }
 @font-face {
   font-family: "J_Light";
-  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+  src: url("font/JetBrainsMono-Light.ttf");
 }
 @font-face {
   font-family: "J_Bold";
-  src: url("./font/ttf/JetBrainsMono-Bold.ttf");
+  src: url("font/JetBrainsMono-Bold.ttf");
 }
 @font-face {
   font-family: "medium";
@@ -384,91 +395,97 @@ input {
   font-family: "h-thin";
   src: url("font/HarmonyOS_Sans_SC_Thin.ttf");
 }
-.collection_page {
+.cabin_page {
   position: relative;
   overflow-y: scroll;
   display: flex;
 }
-.collection_page::-webkit-scrollbar {
+.cabin_page::-webkit-scrollbar {
   display: none;
 }
-.collection_page .collections {
+.cabin_page .cartons {
   width: 100%;
   height: 100%;
-  justify-content: center;
+  justify-content: space-between;
   transition: all 100ms;
   padding: 20px 0;
+  margin: 10px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  display: grid;
+  gap: 1rem;
 }
 @media screen and (min-width: 1200px) {
-  .collection_page .collections {
+  .cabin_page .cartons {
     padding: 20px 100px;
   }
 }
-.collection_page .collections .title {
+.cabin_page .cartons .title {
   font-family: "kur", "yyys", sans-serif;
 }
-.collection_page .collections .grid_layout {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  margin-top: 2rem;
-  display: grid;
-  gap: 1.5rem;
-}
 @media (min-width: 600px) {
-  .collection_page .collections .grid_layout {
+  .cabin_page .cartons {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (min-width: 900px) {
-  .collection_page .collections .grid_layout {
+  .cabin_page .cartons {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 @media (min-width: 1200px) {
-  .collection_page .collections .grid_layout {
+  .cabin_page .cartons {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
-.collection_page .collections .collection_btn {
+.cabin_page .cartons .carton {
   border-radius: 10px;
   transition: all ease-in 200ms;
-  height: 180px;
+  height: 300px;
   position: relative;
-  width: 100%;
   overflow: hidden;
+  background-size: cover;
 }
-.collection_page .collections .collection_btn:before {
-  content: "";
-  z-index: -1;
+.cabin_page .cartons .carton .back {
   position: absolute;
   inset: 0;
-  transform: translate3d(0, 0, 0) scale(0.95);
-  filter: blur(20px);
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.collection_page .collections .collection_btn:hover:before {
-  background-color: rgba(0, 0, 0, 0.03);
-  box-shadow: inset 0 0 1px 1px #626262;
-}
-.collection_page .collections .collection_btn .name {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  font-size: 1.8rem;
-  font-family: "kur", "yyys", sans-serif;
-}
-.collection_page .collections .collection_btn .content {
+.cabin_page .cartons .carton:before {
+  content: "";
   position: absolute;
-  top: 0;
+  inset: 0;
+  z-index: 2;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.cabin_page .cartons .carton:hover .back {
+  filter: blur(12px);
+  transform: scale(1.2);
+}
+.cabin_page .cartons .carton:hover .content {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cabin_page .cartons .carton:hover .tags {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cabin_page .cartons .carton:hover:before {
+  background-color: rgba(0, 0, 0, 0.52);
+}
+.cabin_page .cartons .carton .content {
+  position: absolute;
   left: 0;
+  bottom: 0;
   width: 100%;
-  height: 100%;
+  max-height: 80%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
+  align-content: start;
   text-align: center;
   color: #e8e8e8;
   line-height: 1.5;
@@ -478,100 +495,72 @@ input {
   transform: translateY(100px);
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   padding: 20px;
+  z-index: 2;
 }
-.collection_page .collections .collection_btn .content .description {
+.cabin_page .cartons .carton .content .name {
+  font-size: 2rem;
+  text-transform: capitalize;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  width: 100%;
+  text-align: start;
+  color: rgb(255, 255, 255);
+}
+.cabin_page .cartons .carton .content .description {
+  padding-top: 20px;
   box-sizing: border-box;
   overflow: hidden;
-  margin-top: 15px;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-  height: 120px;
-  line-height: 24px;
+  -webkit-line-clamp: 6;
+  height: 200px;
+  line-height: 22px;
   text-indent: 1.6rem;
   width: 100%;
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 0.8rem;
+  color: rgb(222, 222, 222);
+  font-size: 0.9rem;
   text-align: justify;
 }
-.collection_page .collections .collection_btn .content .tags {
-  top: 10px;
-  right: 20px;
+.cabin_page .cartons .carton .tags {
   position: absolute;
+  top: 0;
+  right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  left: 0;
+  width: 100%;
+  max-height: 20%;
+  color: #e8e8e8;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-100px);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  padding: 10px;
+  align-items: flex-start;
+  align-content: flex-start;
+  z-index: 2;
 }
-.collection_page .collections .collection_btn .content .tags .tag {
-  font-size: 0.72rem;
+.cabin_page .cartons .carton .tags .tag {
+  background-color: rgba(145, 145, 145, 0.22);
+  font-size: 0.76rem;
+  white-space: nowrap;
+  height: fit-content;
   margin: 2px;
   font-family: "HarmonyOS Sans SC", sans-serif;
   color: #efefef;
-  padding: 2px 6px;
+  padding: 2px 12px;
   border-radius: 20px;
-}
-.collection_page .collections .collection_btn:hover .content {
-  opacity: 1;
-  transform: translateY(0);
-}
-.collection_page .collections .collection_btn:hover .name {
-  filter: blur(7px) opacity(20%);
-}
-.collection_page .timeline {
-  height: 100%;
-  width: 450px;
-  padding: 20px;
-}
-.collection_page .timeline svg {
-  width: 32px;
-  height: 32px;
-  margin-right: 10px;
-}
-.collection_page .timeline div {
-  font-family: light, sans-serif;
-}
-.collection_page .title {
-  height: 32px;
-  font-size: 1.8rem;
-  font-family: "HarmonyOS Sans SC", sans-serif, sans-serif;
-  font-weight: normal;
-  margin: 20px 0 20px 0;
-}
-.collection_page .collection_abstract {
-  padding: 20px;
-  flex: 1;
-  position: relative;
-}
-.collection_page .collection_abstract svg {
-  width: 32px;
-  height: 32px;
-  margin-right: 10px;
-}
-.collection_page .collection_abstract div {
-  font-family: light, sans-serif;
-}
-.collection_page .collection_abstract .btn_group {
-  position: absolute;
-  width: 100%;
-  bottom: 40px;
-}
-.collection_page .collection_bar {
-  padding: 20px;
-  background-color: white;
-  width: 400px;
-  height: 100%;
-  border-right: 1px solid #f3f3f3;
-  display: flex;
-  flex-direction: column;
-}
-.collection_page .collection_bar .collection_list {
-  flex: 1;
-  display: block;
-  overflow-y: scroll;
 }
 
 @font-face {
   font-display: block;
   font-family: "Noto_Light";
-  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+  src: url("font/JetBrainsMono-Light.ttf");
 }
 @font-face {
   font-family: "tego";
@@ -592,24 +581,24 @@ input {
 @font-face {
   font-display: block;
   font-family: "Noto_Medium";
-  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+  src: url("font/JetBrainsMono-Medium.ttf");
 }
 @font-face {
   font-display: block;
   font-family: "J_Medium";
-  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+  src: url("font/JetBrainsMono-Medium.ttf");
 }
 @font-face {
   font-family: "J_Regular";
-  src: url("./font/ttf/JetBrainsMono-Regular.ttf");
+  src: url("font/JetBrainsMono-Regular.ttf");
 }
 @font-face {
   font-family: "J_Light";
-  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+  src: url("font/JetBrainsMono-Light.ttf");
 }
 @font-face {
   font-family: "J_Bold";
-  src: url("./font/ttf/JetBrainsMono-Bold.ttf");
+  src: url("font/JetBrainsMono-Bold.ttf");
 }
 @font-face {
   font-family: "medium";
@@ -689,7 +678,7 @@ input {
 @font-face {
   font-display: block;
   font-family: "Noto_Light";
-  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+  src: url("font/JetBrainsMono-Light.ttf");
 }
 @font-face {
   font-family: "tego";
@@ -710,24 +699,24 @@ input {
 @font-face {
   font-display: block;
   font-family: "Noto_Medium";
-  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+  src: url("font/JetBrainsMono-Medium.ttf");
 }
 @font-face {
   font-display: block;
   font-family: "J_Medium";
-  src: url("./font/ttf/JetBrainsMono-Medium.ttf");
+  src: url("font/JetBrainsMono-Medium.ttf");
 }
 @font-face {
   font-family: "J_Regular";
-  src: url("./font/ttf/JetBrainsMono-Regular.ttf");
+  src: url("font/JetBrainsMono-Regular.ttf");
 }
 @font-face {
   font-family: "J_Light";
-  src: url("./font/ttf/JetBrainsMono-Light.ttf");
+  src: url("font/JetBrainsMono-Light.ttf");
 }
 @font-face {
   font-family: "J_Bold";
-  src: url("./font/ttf/JetBrainsMono-Bold.ttf");
+  src: url("font/JetBrainsMono-Bold.ttf");
 }
 @font-face {
   font-family: "medium";
@@ -1021,17 +1010,17 @@ input {
   display: flex;
 }
 .markdown_page .markdown_slide {
-  padding: 20px;
+  padding: 5px;
   height: 100%;
   width: 300px;
   max-width: 300px;
   min-width: 300px;
   border-right: 1px solid #f3f3f3;
   position: sticky;
-  top: 72px;
+  top: 60px;
 }
 .markdown_page .markdown_slide * {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: #727272;
 }
 .markdown_page .markdown_slide .accordion {
@@ -1052,33 +1041,38 @@ input {
 }
 .markdown_page .markdown_slide .list {
   line-height: 30px;
-  padding: 3px 10px;
+  padding: 0 6px;
   border-radius: 8px;
+  color: #1e1e1e;
 }
 .markdown_page .markdown_slide .list:hover {
   background-color: rgba(229, 229, 229, 0.21);
 }
-.markdown_page .markdown_slide .subtitle, .markdown_page .markdown_slide .title {
-  color: #131313;
-  text-transform: uppercase;
-  font-size: 1rem;
-  margin: 2px;
-}
 .markdown_page .markdown_slide .section_title {
-  color: #131313;
+  font-family: Noto_Medium, sans-serif;
+  color: #808080;
   text-transform: uppercase;
-  font-size: 1rem;
-  margin: 20px 0 10px;
+  font-size: 0.9rem;
+  margin: 30px 0 5px 0;
 }
 .markdown_page .markdown_slide .title {
-  font-size: 1.6rem;
-  margin: 20px 0 10px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #494949;
+  font-family: Noto_Medium, sans-serif;
+  margin: 20px 0 20px;
+}
+.markdown_page .markdown_slide .title svg {
+  display: inline;
+  margin-right: 5px;
 }
 .markdown_page .navigation {
   min-width: 250px;
   max-width: 250px;
   position: sticky;
-  top: 72px;
+  top: 60px;
   height: 100%;
   padding: 30px 0;
 }
@@ -1173,6 +1167,7 @@ html {
 
 #root {
   width: 100%;
+  background-color: rgb(255, 255, 255);
 }
 
 .App {
@@ -1184,9 +1179,9 @@ html {
 
 .main {
   position: relative;
-  height: calc(100vh - 72px);
+  height: calc(100vh - 60px);
   width: 100%;
-  margin: 72px auto 0;
+  margin: 60px auto 0;
   max-width: 1600px;
 }
 

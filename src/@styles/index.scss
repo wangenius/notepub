@@ -18,15 +18,15 @@ html {
 }
 
 ::-webkit-scrollbar {
-  //display: none;
 }
+
 ::-webkit-scrollbar-track {
-  //display: none;
   background-color: transparent;
 }
 
 #root {
   width: 100%;
+  background-color: $bc;
 }
 
 .App {
@@ -43,62 +43,3 @@ html {
   margin: $header_height auto 0;
   max-width: $maxWidth;
 }
-
-
-//.footer{
-//  position: absolute;
-//  bottom: 0;
-//  width: 100%;
-//  background-color: #f6f6f6;
-//  color: #6c6c6c;
-//  padding-top: 20px;
-//  *{
-//    color: #383838;
-//  }
-//  .footerContainer{
-//    max-width: $maxWidth;
-//    margin: 0 auto;
-//  }
-//  .icons_part{
-//    display: flex;
-//    svg{
-//      margin-right: 20px;
-//      color: white;
-//      width: 30px;
-//      padding: 5px;
-//      height: 30px;
-//      border-radius: 6px;
-//      transition: all 100ms;
-//      &:hover{
-//        background-color: #000;
-//        fill: white;
-//      }
-//    }
-//  }
-//}
-
-
-//::-webkit-scrollbar {
-//  border-radius: 10px;
-//  background-color: rgba(255, 255, 255, 0);
-//  box-shadow: none;
-//  padding: 6px;
-//  width: 8px;
-//}
-//
-//::-webkit-scrollbar-thumb {
-//  margin: 2px;
-//  border-radius: 6px;
-//  background-color: rgba(224, 219, 219, 0.67);
-//}
-//
-//::-webkit-scrollbar-track {
-//  background-color: rgba(0, 0, 0, 0);
-//  margin: 2px;
-//  padding: 6px;
-//
-//}
-//
-//::-webkit-scrollbar-button {
-//  display: none;
-//}
