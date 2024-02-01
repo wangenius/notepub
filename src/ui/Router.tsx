@@ -7,7 +7,7 @@ import GadgetPage from "./sack/GadgetPage";
 
 export const Router = () => {
   return (
-    <BrowserRouter basename={import.meta.url}>
+    <BrowserRouter basename={"/"}>
       <Routes>
         <Route path="/" element={<App />}>
           <Route path={""} element={<CabinPage />} />
