@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "wangenius",
-  "homepage": "https://wangenius.github.io/pamplet_client",
+  "homepage": "https://wangenius.github.io",
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
