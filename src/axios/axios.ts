@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const domain = "http://39.96.54.181:3002/api";
+export const domain = "https://api.wangenius.com:3000/api";
 
 export const instance = axios.create({
   baseURL: domain,

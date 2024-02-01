@@ -1,6 +1,6 @@
 {
-  "name": "mistlight",
-  "version": "0.1.0",
+  "name": "notehub",
+  "version": "0.2.0",
   "private": true,
   "author": "wangenius",
   "homepage": "https://wangenius.github.io",
@@ -48,7 +48,7 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject",
+    "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -75,6 +75,7 @@
     "@types/markdown-navbar": "^1.4.4",
     "@types/react-smooth-scrollbar": "^8.0.6",
     "@types/react-syntax-highlighter": "^15.5.11",
+    "customize-cra": "^1.0.0",
     "prettier": "^3.1.1",
     "react-app-rewired": "^2.2.1"
   }
