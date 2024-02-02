@@ -9,6 +9,7 @@ export const useCabin = () => {
   /** 深度刷新cabin结构 */
   const renovate = useCallback(() => {
     api.cabin.renovate().then((res) => {
+      console.log(res);
       dispatch(cabinSlice.actions.setCartons((res.data as Cabin).cartons));
     });
   }, [dispatch]);

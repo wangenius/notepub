@@ -2,12 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <link href="%PUBLIC_URL%/Emoji2.png" rel="icon"/>
+    <link href="%PUBLIC_URL%/logo.png" rel="icon"/>
     <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
     <!--    <meta http-equiv="content-security-policy" content="interest-cohort=()">-->
     <!--将http请求升级为https请求-->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+    <!--    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>-->
     <title></title>
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+
+        (function (l) {
+            if (l.search[1] === '/') {
+                const decoded = l.search.slice(1).split('&').map(function (s) {
+                    return s.replace(/~and~/g, '&')
+                }).join('?');
+                window.history.replaceState(null, null,
+                    l.pathname.slice(0, -1) + decoded + l.hash
+                );
+            }
+        }(window.location))
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
+
 </head>
 <body>
 <div id="root"></div>

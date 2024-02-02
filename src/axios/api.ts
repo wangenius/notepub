@@ -4,6 +4,7 @@ export namespace api {
   export abstract class cabin {
     static prefix = "/cabin";
     static renovate = async () => {
+      console.log(1);
       return await instance.get(`${cabin.prefix}/renovate`);
     };
 
@@ -20,6 +21,7 @@ export namespace api {
      * @example: load(`/${sack.dirname}/xxx/${sheet.name}`)
      */
     static load = async (search_path: string) => {
+      console.log(1);
       return await instance.get(`${sheet.prefix}/get?path=` + search_path);
     };
   }
